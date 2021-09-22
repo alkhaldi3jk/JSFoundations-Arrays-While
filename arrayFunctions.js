@@ -8,9 +8,26 @@
  * isArrayLengthOdd([1, 2, 3]) -> true
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
+
+
 function isArrayLengthOdd(numbers) {
+
+  if (numbers.length%2 !== 0){
+    return true 
+  }
+  else{
+    return false
+  }
+  }
   // Your code here
-}
+
+//a =[1 ,2, 3]
+//console.log("length", `${a.length}`)
+//console.log(a)
+//isArrayLengthOdd([1, 2, 3])
+//console.log (isArrayLengthOdd([1, 2, 3]))
+//isArrayLengthOdd([1, 2, 3,4])
+//console.log (isArrayLengthOdd([1, 2, 3,4]))
 
 /**
  * isArrayLengthEven(numbers):
@@ -23,8 +40,20 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
+  if (numbers.length%2 ===1 ){
+    return false
+  }
+  else {
+    return true
+  }
+ 
+ 
 }
+//isArrayLengthEven([1, 2, 3])
+//console.log(isArrayLengthEven([1, 2, 3]))
+//isArrayLengthEven([1, 2, 3, 4])
+//console.log(isArrayLengthEven([1, 2, 3, 4]))
+
 
 /**
  * addLailaToArray(instructors):
@@ -35,9 +64,13 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  // Your code here
+  instructors.push("Laila");
+  return instructors;
+ 
 }
 
+addLailaToArray(["Mshary", "Hasan"])
+console.log(addLailaToArray(["Mshary", "Hasan"]))
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -47,7 +80,7 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+  return teams.pop()
 }
 
 /**
@@ -61,7 +94,13 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
+  if (fruits.length %2 ===0){
+    return fruits.slice(fruits.length/2, fruits.length);
+  }
+  else{
+    return []
+  }
+
 }
 
 /**
@@ -79,7 +118,13 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .slice()
  */
 function youGottaCalmDown(shout) {
-  // Your code here
+  const x = shout.indexOf("!")
+  if (x < 0){
+    return shout;
+  }
+  else {
+    return shout.slice(0,x+1)
+  }
 }
 
 module.exports = {
