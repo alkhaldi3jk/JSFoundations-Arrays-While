@@ -9,25 +9,14 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 
-
 function isArrayLengthOdd(numbers) {
-
-  if (numbers.length%2 !== 0){
-    return true 
+  if (numbers.length % 2 === 1) {
+    return true;
+  } else {
+    return false;
   }
-  else{
-    return false
-  }
-  }
-  // Your code here
-
-//a =[1 ,2, 3]
-//console.log("length", `${a.length}`)
-//console.log(a)
-//isArrayLengthOdd([1, 2, 3])
-//console.log (isArrayLengthOdd([1, 2, 3]))
-//isArrayLengthOdd([1, 2, 3,4])
-//console.log (isArrayLengthOdd([1, 2, 3,4]))
+}
+// Your code here
 
 /**
  * isArrayLengthEven(numbers):
@@ -40,20 +29,16 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  if (numbers.length%2 ===1 ){
-    return false
+  if (numbers.length % 2 === 1) {
+    return false;
+  } else {
+    return true;
   }
-  else {
-    return true
-  }
- 
- 
 }
 //isArrayLengthEven([1, 2, 3])
 //console.log(isArrayLengthEven([1, 2, 3]))
 //isArrayLengthEven([1, 2, 3, 4])
 //console.log(isArrayLengthEven([1, 2, 3, 4]))
-
 
 /**
  * addLailaToArray(instructors):
@@ -66,11 +51,10 @@ function isArrayLengthEven(numbers) {
 function addLailaToArray(instructors) {
   instructors.push("Laila");
   return instructors;
- 
 }
 
-addLailaToArray(["Mshary", "Hasan"])
-console.log(addLailaToArray(["Mshary", "Hasan"]))
+addLailaToArray(["Mshary", "Hasan"]);
+console.log(addLailaToArray(["Mshary", "Hasan"]));
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -80,7 +64,7 @@ console.log(addLailaToArray(["Mshary", "Hasan"]))
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  return teams.pop()
+  return teams.pop();
 }
 
 /**
@@ -94,13 +78,13 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  if (fruits.length %2 ===0){
-    return fruits.slice(fruits.length/2, fruits.length);
+  if (fruits.length % 2 === 0) {
+    return fruits.slice(fruits.length / 2, fruits.length);
+    // fruit.length is the length of any arry that we assign
+    // to the function (in this case fruits)
+  } else {
+    return [];
   }
-  else{
-    return []
-  }
-
 }
 
 /**
@@ -118,14 +102,21 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .slice()
  */
 function youGottaCalmDown(shout) {
-  const x = shout.indexOf("!")
-  if (x < 0){
+  const x = shout.indexOf("!");
+  //the string is concedered an array
+  // x = an element in the array
+  if (x < 0) {
     return shout;
-  }
-  else {
-    return shout.slice(0,x+1)
+    //we are returning the array if x is not doublicated
+  } else {
+    return shout.slice(0, x + 1);
+    //if x was doublicated we will slice the doubllicated elements
   }
 }
+
+let shout = "shout!!!!";
+youGottaCalmDown(shout);
+console.log(youGottaCalmDown(shout));
 
 module.exports = {
   isArrayLengthOdd,
